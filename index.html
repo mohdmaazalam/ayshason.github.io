@@ -1,58 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b1220">
-<meta name="description" content="Cyber Cafe & Digital Seva — official government portals and useful online tools in one place.">
-<title>Digital Seva Desk | Cyber Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10152b">
+<meta name="description" content="Funtush Digital Seva — Digital services, government portals, PDF tools and online assistance in one place.">
+<title>Funtush Digital Seva | Smart Digital Desk</title>
+
 <style>
-:root{--bg:#0b1220;--panel:#111c30;--line:#24334d;--text:#edf4ff;--muted:#9fb0ca;--accent:#6ee7c2;--blue:#80b7ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#142b45 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1120px;margin:auto;padding:22px}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0 28px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--blue));color:#07111e;display:grid;place-items:center;font-size:22px}.pill{border:1px solid #33516c;border-radius:999px;padding:8px 12px;color:var(--muted);font-size:12px}
-.hero{padding:30px 0 26px}.eyebrow{color:var(--accent);font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.05;letter-spacing:-1.8px;margin:14px 0}.hero p{max-width:680px;color:var(--muted);font-size:17px;line-height:1.7;margin:0}.searchbox{margin:26px 0 8px;display:flex;gap:10px;max-width:600px}.searchbox input{flex:1;min-width:0;background:#0e192b;border:1px solid var(--line);color:var(--text);border-radius:14px;padding:14px 16px;font-size:15px;outline:none}.searchbox input:focus{border-color:var(--accent)}.section{padding:22px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.section h2{font-size:21px;margin:0}.sectionhead span{color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.card{background:linear-gradient(145deg,rgba(20,33,54,.95),rgba(13,23,39,.96));border:1px solid var(--line);border-radius:18px;padding:18px;min-height:142px;display:flex;flex-direction:column;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:#548b9e}.icon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#1c3045;font-size:19px;margin-bottom:13px}.card h3{font-size:16px;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);line-height:1.5;margin:0 0 15px}.go{margin-top:auto;color:var(--accent);font-size:13px;font-weight:700}.notice{background:#1b2433;border:1px solid #4b4125;color:#e7d9ac;border-radius:14px;padding:15px 17px;line-height:1.6;font-size:13px}.toolsnote{color:var(--muted);font-size:12px;line-height:1.6;margin-top:10px}footer{border-top:1px solid var(--line);margin-top:30px;padding:24px 0 12px;color:var(--muted);font-size:12px;line-height:1.7;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:16px}.hero{padding-top:20px}}@media(max-width:480px){.grid{grid-template-columns:1fr}.card{min-height:unset}.pill{display:none}}
+:root {
+  --bg:#0b1020;
+  --panel:#141c32;
+  --panel2:#192440;
+  --text:#f5f7ff;
+  --muted:#aab5d0;
+  --primary:#a78bfa;
+  --accent:#36e0c0;
+  --border:rgba(255,255,255,.10);
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(ellipse at 10% 0%,rgba(124,58,237,.18),transparent 35%),
+    radial-gradient(ellipse at 100% 30%,rgba(13,148,136,.12),transparent 35%),
+    var(--bg);
+}
+a {color:inherit;text-decoration:none}
+button,input {font:inherit}
+.wrap {width:min(1120px,92%);margin:auto}
+header {
+  position:sticky;top:0;z-index:10;
+  background:rgba(11,16,32,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav {
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:15px;
+}
+.brand {display:flex;align-items:center;gap:11px;font-weight:850;font-size:23px}
+.logo {
+  width:45px;height:45px;border-radius:15px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#a78bfa,#36e0c0);
+  color:#10152b;font-size:25px;font-weight:1000;
+  box-shadow:0 5px 25px #a78bfa30;
+}
+.brand small {display:block;font-size:10px;color:var(--muted);letter-spacing:2px}
+.navlinks {display:flex;gap:20px;color:var(--muted);font-size:14px}
+.navlinks a:hover {color:var(--accent)}
+.hero {padding:65px 0 35px}
+.badge {
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 13px;border:1px solid var(--border);
+  border-radius:50px;background:#ffffff08;
+  color:var(--accent);font-size:12px;font-weight:700;
+}
+.hero h1 {
+  font-size:clamp(38px,7vw,68px);line-height:1.06;
+  letter-spacing:-2px;margin:22px 0 15px;max-width:800px;
+}
+.gradient {
+  background:linear-gradient(90deg,#c4b5fd,#5eead4);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p {color:var(--muted);line-height:1.8;max-width:650px}
+.actions {display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn {
+  border:1px solid var(--border);border-radius:13px;
+  padding:12px 17px;display:inline-flex;justify-content:center;
+  align-items:center;gap:8px;font-weight:750;cursor:pointer;
+  transition:.2s;
+}
+.btn:hover {transform:translateY(-2px)}
+.primary {background:linear-gradient(120deg,#a78bfa,#67e8d3);color:#10152b;border:0}
+.secondary {background:#ffffff08}
+.quick {
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:12px;margin:20px 0 40px;
+}
+.quick a {
+  padding:17px;border:1px solid var(--border);
+  background:#ffffff06;border-radius:17px;
+}
+.quick strong {display:block;font-size:15px;margin-bottom:5px}
+.quick span {font-size:12px;color:var(--muted)}
+section {padding:25px 0 35px}
+.section-head {
+  display:flex;justify-content:space-between;
+  align-items:end;gap:15px;flex-wrap:wrap;margin-bottom:18px;
+}
+.section-head h2 {font-size:28px;margin:0 0 6px}
+.section-head p {margin:0;color:var(--muted);font-size:14px}
+.search {
+  width:min(100%,320px);padding:12px 15px;
+  color:var(--text);background:var(--panel);
+  border:1px solid var(--border);border-radius:12px;outline:none;
+}
+.search:focus {border-color:var(--primary)}
+.grid {display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card {
+  padding:19px;border-radius:18px;
+  border:1px solid var(--border);
+  background:linear-gradient(145deg,#ffffff0b,#ffffff03);
+  transition:.2s;min-width:0;
+}
+.card:hover {transform:translateY(-3px);border-color:#a78bfa88}
+.icon {
+  width:43px;height:43px;border-radius:13px;
+  background:#a78bfa18;display:grid;place-items:center;
+  font-size:23px;margin-bottom:13px;
+}
+.card h3 {font-size:17px;margin:0 0 7px}
+.card p {font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 15px}
+.card .btn {padding:9px 12px;font-size:13px;width:100%}
+.note {
+  padding:15px 17px;margin-top:18px;border-radius:14px;
+  background:#fbbf2410;border:1px solid #fbbf2430;
+  color:#f5d995;font-size:12px;line-height:1.7;
+}
+.contactbox {
+  padding:28px;border-radius:22px;
+  background:linear-gradient(120deg,#a78bfa18,#36e0c012);
+  border:1px solid var(--border);
+}
+footer {margin-top:35px;border-top:1px solid var(--border);padding:28px 0 100px;color:var(--muted);font-size:12px;line-height:1.8}
+.float {
+  position:fixed;right:17px;bottom:18px;z-index:20;
+  width:57px;height:57px;border-radius:50%;
+  display:grid;place-items:center;background:#25d366;
+  color:white;font-size:27px;box-shadow:0 6px 25px #0005;
+}
+.hidden {display:none!important}
+@media(max-width:760px) {
+  .navlinks {display:none}
+  .hero {padding-top:43px}
+  .quick {grid-template-columns:repeat(2,1fr)}
+  .grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card {padding:14px}
+  .card h3 {font-size:15px}
+  .card p {font-size:12px}
+  .section-head h2 {font-size:24px}
+}
+@media(max-width:380px) {
+  .grid {grid-template-columns:1fr}
+  .brand {font-size:20px}
+}
 </style>
 </head>
+
 <body>
-<div class="wrap">
-<header><div class="brand"><div class="logo">DS</div><div>Digital Seva Desk<div style="font-size:11px;color:var(--muted);font-weight:500;margin-top:3px">CYBER CAFE • ONLINE SERVICES</div></div></div><div class="pill">Free access · Official links</div></header>
-<section class="hero">
-<div class="eyebrow">Your digital workbench</div>
-<h1>Online services,<br><span style="color:var(--accent)">all in one place.</span></h1>
-<p>Government portals aur daily cyber-cafe tools ke quick links. Kisi service ko kholne ke liye neeche search karein ya category choose karein.</p>
-<div class="searchbox"><input id="search" type="search" placeholder="Search: PAN, Aadhaar, PDF, background remover…" aria-label="Services search"></div>
-</section>
-<div class="section"><div class="sectionhead"><h2>Government & ID Services</h2><span>Official portals</span></div><div class="grid" id="government">
-<a class="card" href="https://uidai.gov.in/" target="_blank" rel="noopener"><div class="icon">🪪</div><h3>Aadhaar / UIDAI</h3><p>Aadhaar services, updates and official information.</p><div class="go">Open UIDAI ↗</div></a>
-<a class="card" href="https://voters.eci.gov.in/" target="_blank" rel="noopener"><div class="icon">🗳️</div><h3>Voter Services</h3><p>Elector search, registration and voter-related services.</p><div class="go">Open Voters Portal ↗</div></a>
-<a class="card" href="https://www.passportindia.gov.in/" target="_blank" rel="noopener"><div class="icon">🛂</div><h3>Passport Seva</h3><p>Passport application, appointments and tracking.</p><div class="go">Open Passport Seva ↗</div></a>
-<a class="card" href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener"><div class="icon">📄</div><h3>PAN / Income Tax</h3><p>Income Tax e-filing portal and PAN-related services.</p><div class="go">Open e-Filing ↗</div></a>
-<a class="card" href="https://www.protean-tinpan.com/" target="_blank" rel="noopener"><div class="icon">💳</div><h3>Protean PAN Services</h3><p>PAN application and related services from Protean.</p><div class="go">Open Protean ↗</div></a>
-<a class="card" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener"><div class="icon">🔐</div><h3>DigiLocker</h3><p>Access digital documents and issued certificates.</p><div class="go">Open DigiLocker ↗</div></a>
-<a class="card" href="https://web.umang.gov.in/" target="_blank" rel="noopener"><div class="icon">🇮🇳</div><h3>UMANG</h3><p>Central and state government services.</p><div class="go">Open UMANG ↗</div></a>
-<a class="card" href="https://digitalseva.csc.gov.in/" target="_blank" rel="noopener"><div class="icon">🏢</div><h3>CSC Digital Seva</h3><p>Common Service Centre portal for authorised operators.</p><div class="go">Open CSC ↗</div></a>
-<a class="card" href="https://edistrict.up.gov.in/" target="_blank" rel="noopener"><div class="icon">🏛️</div><h3>UP e-District</h3><p>Uttar Pradesh certificates and citizen services.</p><div class="go">Open UP e-District ↗</div></a>
-<a class="card" href="https://upbhulekh.gov.in/" target="_blank" rel="noopener"><div class="icon">🌾</div><h3>UP Bhulekh</h3><p>Uttar Pradesh land records and Khatauni portal.</p><div class="go">Open Bhulekh ↗</div></a>
-<a class="card" href="https://parivahan.gov.in/" target="_blank" rel="noopener"><div class="icon">🚘</div><h3>Parivahan</h3><p>Driving licence and vehicle-related government services.</p><div class="go">Open Parivahan ↗</div></a>
-<a class="card" href="https://www.nvsp.in/" target="_blank" rel="noopener"><div class="icon">🔎</div><h3>Voter Information</h3><p>Election-related information; use the ECI portal if redirected.</p><div class="go">Open NVSP ↗</div></a>
-</div></div>
-<div class="section"><div class="sectionhead"><h2>PDF, Photo & Productivity Tools</h2><span>Third-party services</span></div><div class="grid" id="tools">
-<a class="card" href="https://www.ilovepdf.com/" target="_blank" rel="noopener"><div class="icon">📚</div><h3>PDF Tools</h3><p>Merge, split, compress and convert PDFs.</p><div class="go">Open iLovePDF ↗</div></a>
-<a class="card" href="https://smallpdf.com/" target="_blank" rel="noopener"><div class="icon">🗂️</div><h3>PDF Converter</h3><p>PDF conversion and document utilities.</p><div class="go">Open Smallpdf ↗</div></a>
-<a class="card" href="https://www.remove.bg/" target="_blank" rel="noopener"><div class="icon">🖼️</div><h3>Background Remover</h3><p>Remove photo backgrounds online.</p><div class="go">Open remove.bg ↗</div></a>
-<a class="card" href="https://www.photopea.com/" target="_blank" rel="noopener"><div class="icon">🎨</div><h3>Photo Editor</h3><p>Browser-based image editor for common formats.</p><div class="go">Open Photopea ↗</div></a>
-<a class="card" href="https://www.canva.com/" target="_blank" rel="noopener"><div class="icon">✨</div><h3>Design & ID Cards</h3><p>Design posters, cards, resumes and social graphics.</p><div class="go">Open Canva ↗</div></a>
-<a class="card" href="https://www.google.com/drive/" target="_blank" rel="noopener"><div class="icon">☁️</div><h3>Google Drive</h3><p>Store, scan and share files and documents.</p><div class="go">Open Drive ↗</div></a>
-</div></div>
-<div class="section"><div class="notice"><strong>Important:</strong> Ye website sirf quick-links dashboard hai; ye kisi government department ki official website nahi hai. Aadhaar, PAN, OTP, passwords ya customer documents is page par enter/upload nahi hote. Details sirf official portal par verify karke bharein. CSC login sirf authorised operator apne credentials se kare.</div><p class="toolsnote">Kuch government links badal sakte hain ya naye portal par redirect ho sakte hain. Third-party tools ki apni privacy policy, limits aur fees ho sakti hain.</p></div>
-<footer><div>© <span id="year"></span> Digital Seva Desk · Independent quick-links page</div><div>Made for everyday cyber-cafe work</div></footer>
-</div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Funtush Home">
+      <span class="logo">F</span>
+      <span>FUNTUSH<small>DIGITAL SEVA DESK</small></span>
+    </a>
+    <nav class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#government">Government</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn primary" href="tel:+918090992463">☎ Call Now</a>
+  </div>
+</header>
+
+<main class="wrap" id="home">
+  <div class="hero">
+    <span class="badge">✦ YOUR SMART DIGITAL WORKSPACE</span>
+    <h1>Digital kaam,<br><span class="gradient">ab hoga Funtush.</span></h1>
+    <p>
+      Government portals, online services aur useful digital tools —
+      sab ek hi jagah. Apna kaam aasaan banayein Funtush Digital Seva Desk ke saath.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#services">Explore Services ↗</a>
+      <a class="btn secondary" href="https://wa.me/918090992463?text=Namaste%20Funtush%2C%20mujhe%20online%20service%20ki%20jaankari%20chahiye." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+    </div>
+  </div>
+
+  <div class="quick">
+    <a href="tel:+918090992463"><strong>📞 Direct Call</strong><span>Call for assistance</span></a>
+    <a href="https://wa.me/918090992463" target="_blank" rel="noopener"><strong>💚 WhatsApp</strong><span>Chat with us</span></a>
+    <a href="https://www.instagram.com/aysha.son?vrfl=cWx4bjR4YWEyamd0" target="_blank" rel="noopener"><strong>📸 Instagram</strong><span>Follow our page</span></a>
+    <a href="#tools"><strong>⚡ Smart Tools</strong><span>PDF & image tools</span></a>
+  </div>
+
+  <section id="services">
+    <div class="section-head">
+      <div><h2>✨ Popular Services</h2><p>Roz ke digital kaam ke useful links.</p></div>
+      <input class="search" id="search" type="search" placeholder="🔎 Search service..." aria-label="Search services">
+    </div>
+    <div class="grid" id="serviceGrid">
+      <article class="card" data-key="aadhaar aadhar uidai update download">
+        <div class="icon">🪪</div><h3>Aadhaar Services</h3>
+        <p>Aadhaar ki official website aur online services.</p>
+        <a class="btn secondary" href="https://uidai.gov.in/" target="_blank" rel="noopener">Open UIDAI ↗</a>
+      </article>
+      <article class="card" data-key="pan card income tax nsdl protean">
+        <div class="icon">💳</div><h3>PAN Card</h3>
+        <p>PAN services aur official application portals.</p>
+        <a class="btn secondary" href="https://www.protean-tinpan.com/" target="_blank" rel="noopener">Open PAN Portal ↗</a>
+      </article>
+      <article class="card" data-key="voter id election card">
+        <div class="icon">🗳️</div><h3>Voter ID</h3>
+        <p>Voter registration aur electoral services.</p>
+        <a class="btn secondary" href="https://voters.eci.gov.in/" target="_blank" rel="noopener">Open Voters Portal ↗</a>
+      </article>
+      <article class="card" data-key="passport seva travel">
+        <div class="icon">🛂</div><h3>Passport Seva</h3>
+        <p>Passport application aur official updates.</p>
+        <a class="btn secondary" href="https://www.passportindia.gov.in/" target="_blank" rel="noopener">Open Passport ↗</a>
+      </article>
+      <article class="card" data-key="digilocker documents certificate">
+        <div class="icon">📁</div><h3>DigiLocker</h3>
+        <p>Digital documents aur certificates access karein.</p>
+        <a class="btn secondary" href="https://www.digilocker.gov.in/" target="_blank" rel="noopener">Open DigiLocker ↗</a>
+      </article>
+      <article class="card" data-key="umang government services">
+        <div class="icon">🇮🇳</div><h3>UMANG</h3>
+        <p>Multiple government services ek platform par.</p>
+        <a class="btn secondary" href="https://web.umang.gov.in/" target="_blank" rel="noopener">Open UMANG ↗</a>
+      </article>
+      <article class="card" data-key="income caste domicile niwas e district up">
+        <div class="icon">📜</div><h3>UP e-District</h3>
+        <p>Income, caste, domicile aur anya citizen services.</p>
+        <a class="btn secondary" href="https://edistrict.up.gov.in/" target="_blank" rel="noopener">Open e-District ↗</a>
+      </article>
+      <article class="card" data-key="up bhulekh khatauni land record">
+        <div class="icon">🌾</div><h3>UP Bhulekh</h3>
+        <p>Uttar Pradesh ke land records aur khatauni.</p>
+        <a class="btn secondary" href="https://upbhulekh.gov.in/" target="_blank" rel="noopener">Open Bhulekh ↗</a>
+      </article>
+      <article class="card" data-key="parivahan driving licence vehicle">
+        <div class="icon">🚘</div><h3>Parivahan</h3>
+        <p>Driving licence aur vehicle-related services.</p>
+        <a class="btn secondary" href="https://parivahan.gov.in/" target="_blank" rel="noopener">Open Parivahan ↗</a>
+      </article>
+      <article class="card" data-key="pension pf epfo">
+        <div class="icon">🏦</div><h3>EPFO</h3>
+        <p>Provident fund aur pension-related information.</p>
+        <a class="btn secondary" href="https://www.epfindia.gov.in/" target="_blank" rel="noopener">Open EPFO ↗</a>
+      </article>
+      <article class="card" data-key="ration card food supply up">
+        <div class="icon">🛒</div><h3>UP Food & Ration</h3>
+        <p>Ration card aur food supply department.</p>
+        <a class="btn secondary" href="https://fcs.up.gov.in/" target="_blank" rel="noopener">Open Portal ↗</a>
+      </article>
+      <article class="card" data-key="my scheme yojana government">
+        <div class="icon">🎯</div><h3>MyScheme</h3>
+        <p>Government schemes aur eligibility ki jaankari.</p>
+        <a class="btn secondary" href="https://www.myscheme.gov.in/" target="_blank" rel="noopener">Find Schemes ↗</a>
+      </article>
+    </div>
+    <div class="note">
+      🔐 Safety: Aadhaar OTP, bank PIN, password ya sensitive documents kisi anjaan vyakti ko na dein.
+      Sirf official portal par hi personal details submit karein.
+    </div>
+  </section>
+
+  <section id="government">
+    <div class="section-head">
+      <div><h2>🏛️ Government Desk</h2><p>Official portals ke shortcuts.</p></div>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">🌐</div><h3>National Portal</h3><p>Bharat Sarkar ki official information.</p><a class="btn secondary" href="https://www.india.gov.in/" target="_blank" rel="noopener">Visit Portal ↗</a></article>
+      <article class="card"><div class="icon">🧑‍💻</div><h3>CSC Digital Seva</h3><p>Common Service Centre ki official website.</p><a class="btn secondary" href="https://digitalseva.csc.gov.in/" target="_blank" rel="noopener">Visit CSC ↗</a></article>
+      <article class="card"><div class="icon">📄</div><h3>Income Tax</h3><p>Income tax e-filing aur related services.</p><a class="btn secondary" href="https://www.incometax.gov.in/" target="_blank" rel="noopener">Visit Portal ↗</a></article>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="section-head">
+      <div><h2>🛠️ Smart Digital Tools</h2><p>PDF, image aur productivity tools.</p></div>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">📑</div><h3>PDF Tools</h3><p>PDF merge, split, compress aur convert karne ke tools.</p><a class="btn secondary" href="https://www.ilovepdf.com/" target="_blank" rel="noopener">Open PDF Tools ↗</a></article>
+      <article class="card"><div class="icon">🖼️</div><h3>Background Remover</h3><p>Image ka background remove karne ka online tool.</p><a class="btn secondary" href="https://www.remove.bg/" target="_blank" rel="noopener">Remove Background ↗</a></article>
+      <article class="card"><div class="icon">🗜️</div><h3>Image Compressor</h3><p>Images ko resize aur compress karne ke liye.</p><a class="btn secondary" href="https://www.iloveimg.com/compress-image" target="_blank" rel="noopener">Compress Image ↗</a></article>
+      <article class="card"><div class="icon">📝</div><h3>PDF to Word</h3><p>PDF documents ko editable Word mein convert karein.</p><a class="btn secondary" href="https://www.ilovepdf.com/pdf_to_word" target="_blank" rel="noopener">Convert PDF ↗</a></article>
+      <article class="card"><div class="icon">🔠</div><h3>Hindi Typing</h3><p>Hindi typing aur transliteration mein madad.</p><a class="btn secondary" href="https://www.google.com/intl/hi/inputtools/" target="_blank" rel="noopener">Hindi Input ↗</a></article>
+      <article class="card"><div class="icon">📐</div><h3>Image Resize</h3><p>Passport-size aur doosre image dimensions taiyar karein.</p><a class="btn secondary" href="https://www.iloveimg.com/resize-image" target="_blank" rel="noopener">Resize Image ↗</a></article>
+    </div>
+    <div class="note">
+      Third-party tools par sensitive documents upload karne se pehle unki privacy policy padhein.
+      Official government applications ke liye government portal ko hi prefer karein.
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contactbox">
+      <span class="badge">LET'S CONNECT</span>
+      <h2 style="font-size:30px;margin-bottom:8px">Need digital assistance?</h2>
+      <p style="color:var(--muted);line-height:1.7">
+        Kisi service ke baare mein poochhna hai? Call karein ya WhatsApp par message bhejein.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="tel:+918090992463">📞 +91 80909 92463</a>
+        <a class="btn secondary" href="https://wa.me/918090992463?text=Namaste%20Funtush%2C%20mujhe%20madad%20chahiye." target="_blank" rel="noopener">💚 Chat on WhatsApp</a>
+        <a class="btn secondary" href="https://www.instagram.com/aysha.son?vrfl=cWx4bjR4YWEyamd0" target="_blank" rel="noopener">📸 Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="font-size:18px;font-weight:850;color:white">✦ FUNTUSH DIGITAL SEVA</div>
+    <p>One smart place for everyday digital work.</p>
+    <p>
+      Funtush ek independent digital service desk website hai.
+      Yeh UIDAI, Government of India, Uttar Pradesh Government ya CSC ka official website nahi hai.
+      Sabhi trademarks aur government portals apne respective owners ke hain.
+    </p>
+    <p>© <span id="year"></span> Funtush Digital Seva. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/918090992463?text=Namaste%20Funtush" target="_blank" rel="noopener" aria-label="WhatsApp Funtush">✆</a>
+
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const search=document.getElementById('search');
-search.addEventListener('input',()=>{const q=search.value.toLowerCase().trim();document.querySelectorAll('.card').forEach(card=>{card.style.display=card.innerText.toLowerCase().includes(q)?'flex':'none';});});
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const search = document.getElementById("search");
+const cards = document.querySelectorAll("#serviceGrid .card");
+
+search.addEventListener("input", function () {
+  const term = this.value.toLowerCase().trim();
+  cards.forEach(function (card) {
+    const text = (card.innerText + " " + card.dataset.key).toLowerCase();
+    card.classList.toggle("hidden", !text.includes(term));
+  });
+});
 </script>
 </body>
 </html>
